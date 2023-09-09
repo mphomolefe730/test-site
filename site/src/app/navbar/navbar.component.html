@@ -1,0 +1,12 @@
+<div>
+    <div *ngIf="!screenWidth">
+        <i class="fa fa-bars fa-2xl" aria-hidden="true"></i>
+    </div>
+    <div><img [src]='logo' routerLink="" alt="Harvest Hub Logo"/></div>
+    <ul *ngIf="screenWidth">
+        <li><a>HOME</a></li>
+        <li><a>ABOUT US</a></li>
+        <li><a>CONTACT US</a></li>
+    </ul>
+    <button *ngIf="screenWidth" type="button">SEARCH</button>
+</div>
