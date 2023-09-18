@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NavDesktopComponent } from './nav-desktop/nav-desktop.component';
+import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavDesktopComponent,
+    NavMobileComponent
   ],
   imports: [
     BrowserModule,

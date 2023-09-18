@@ -3,6 +3,8 @@
 
 :root{
     --primaryColor: #DF6951;
+    --transparentColor: #D9D9D9;
+    --primaryRadius: 10%;
 }
 body{
     font-family: 'Montserrat','Poppins';

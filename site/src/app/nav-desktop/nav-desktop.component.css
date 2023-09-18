@@ -1,0 +1,40 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+	display: inline-flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li{
+    color: white;
+	display: inline;
+    position: relative;
+    padding: 10px;
+}
+
+nav ul ul{
+    display: none;
+    max-width: 400px;
+    background-color: var(--transparentColor);
+    top: 75px;
+    left: 45%;
+    border-radius: var(--primaryRadius);
+    position: absolute;
+}
+nav button{
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 10px;
+    border-radius: var(--primaryRadius);
+    border: 0;
+}
+
+nav ul li:active{
+    border-bottom: 2px solid var(--primaryColor);
+}
