@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
 
 .material-symbols-outlined {
     @apply text-4xl;
@@ -32,6 +35,20 @@
     background-color: #DF6951;
     color: white;
     @apply p-3 rounded-xl
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @apply p-3 rounded-xl;
+    transition: all .2s;
+    
+}
+
+.outline-btn:hover {
+    background-color: #DF6951;
+    border-color: #DF6951;
 }
 
 .logo {
@@ -115,25 +132,6 @@ select, .mini-form input {
     overflow: auto;
 }
 
-/* This applies to all scrollable elements */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-}
 
 
 .logos img {
@@ -153,4 +151,72 @@ select, .mini-form input {
 
 .card-text {
     color: rgba(24, 30, 75, 0.6);
+}
+
+.blue {
+    color: rgba(24, 30, 75, 1);
+}
+
+.bookings, .honeymoon, .tours-section {
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.honeymoon img {
+    max-height: 530px;
+}
+
+.booking-icons-holder img {
+    object-fit: contain;
+}
+
+.statue {
+    background-image: url("../../assets/images/homepage images/liberty.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.statue img {
+    max-width: 13rem;
+}
+
+.eiffel {
+    max-height: 34rem;
+}
+
+.tours {
+    @apply gap-5;
+    display: grid;
+    /* flex-wrap: wrap; */
+    /* justify-items: center; */
+    /* max-width: 90%; */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 200px));
+    grid-auto-rows: 10rem;
+    position: relative;
+    top: -120px;
+}
+
+.image img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+.dual-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/homepage images/forest.png");
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+
+}
+
+.dual-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/homepage images/city.png");
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+
 }
