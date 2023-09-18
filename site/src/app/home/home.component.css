@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.material-symbols-outlined {
+    @apply text-4xl;
+    cursor: pointer;
+    color: white;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+@media (min-width: 1024px) {
+    .material-symbols-outlined {
+        display: none;
+    }
+}
+
+#header {
+    height: 100vh;
+    background-image: url("../../assets/images/thumbnails/Rectangle 19290.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-xl
+}
+
+.logo {
+    color: #DF6951;
+}
+
+
+
+#hero {
+    position: absolute;
+    top: 50%;
+    /* left: 30%; */
+    transform: translateY(-50%);
+}
+
+.mini-form {
+    background: rgba(243, 243, 243, 0.3);
+    border-radius: 7px;
+    backdrop-filter: blur(3px);
+    grid-template-columns: repeat(4, 1fr);
+    @apply p-2 mt-5 mb-3 w-full lg:w-3/4 flex justify-between items-center gap-3;
+}
+
+.mini-form input {
+    outline: none;
+}
+
+.divider {
+    height: 40px;
+    width: 1px;
+    background-color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+ul li a:hover {
+    color: #DF6951
+}
+
+.home {
+    color: #DF6951;
+}
+
+#dropdownNavbar {
+    display: none;
+}
+
+#dropdownNavbarLink:hover .dropdown-btn  {
+    color: #DF6951;
+}
+
+#dropdownNavbarLink:hover #dropdownNavbar {
+    display: grid;
+}
+
+select, .mini-form input {
+    width: 100%;
+}
+
+.mini-form button {
+    width: 70%;
+}
+
+.logos {
+    background: rgba(247, 247, 247, 1);
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    place-items: center;
+    @apply p-10 mb-20 gap-10;
+    overflow: auto;
+}
+
+/* This applies to all scrollable elements */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+.logos img {
+    height: 40px;
+}
+
+.cards {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card-heading {
+    color: rgba(24, 30, 75, 1);
+}
+
+.card-text {
+    color: rgba(24, 30, 75, 0.6);
+}
