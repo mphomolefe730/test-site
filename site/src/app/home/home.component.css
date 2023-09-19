@@ -7,9 +7,7 @@ body {
 }
 
 .material-symbols-outlined {
-    @apply text-4xl;
     cursor: pointer;
-    color: white;
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
@@ -18,7 +16,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-    .material-symbols-outlined {
+    .menu {
         display: none;
     }
 }
@@ -220,3 +218,12 @@ select, .mini-form input {
     flex-grow: 1;
 
 }
+
+.packages {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
