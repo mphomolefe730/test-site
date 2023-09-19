@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+    cursor: pointer;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+@media (min-width: 1024px) {
+    .menu {
+        display: none;
+    }
+}
+
+#header {
+    height: 100vh;
+    background-image: url("../../assets/images/thumbnails/Rectangle 19290.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-xl
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @apply p-3 rounded-xl;
+    transition: all .2s;
+    
+}
+
+.outline-btn:hover {
+    background-color: #DF6951;
+    border-color: #DF6951;
+}
+
+.logo {
+    color: #DF6951;
+}
+
+
+
+#hero {
+    position: absolute;
+    top: 50%;
+    /* left: 30%; */
+    transform: translateY(-50%);
+}
+
+.mini-form {
+    background: rgba(243, 243, 243, 0.3);
+    border-radius: 7px;
+    backdrop-filter: blur(3px);
+    grid-template-columns: repeat(4, 1fr);
+    @apply p-2 mt-5 mb-3 w-full lg:w-3/4 flex justify-between items-center gap-3;
+}
+
+.mini-form input {
+    outline: none;
+}
+
+.divider {
+    height: 40px;
+    width: 1px;
+    background-color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+ul li a:hover {
+    color: #DF6951
+}
+
+.home {
+    color: #DF6951;
+}
+
+#dropdownNavbar {
+    display: none;
+}
+
+#dropdownNavbarLink:hover .dropdown-btn  {
+    color: #DF6951;
+}
+
+#dropdownNavbarLink:hover #dropdownNavbar {
+    display: grid;
+}
+
+select, .mini-form input {
+    width: 100%;
+}
+
+.mini-form button {
+    width: 70%;
+}
+
+.logos {
+    background: rgba(247, 247, 247, 1);
+    height: 150px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(150px, 1fr));
+    place-items: center;
+    @apply p-10 mb-20 gap-10;
+    overflow: auto;
+}
+
+
+
+.logos img {
+    height: 40px;
+}
+
+.cards {
+    display: grid;
+    width: 100%;
+    place-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.card-heading {
+    color: rgba(24, 30, 75, 1);
+}
+
+.card-text {
+    color: rgba(24, 30, 75, 0.6);
+}
+
+.blue {
+    color: rgba(24, 30, 75, 1);
+}
+
+.bookings, .honeymoon, .tours-section {
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.honeymoon img {
+    max-height: 530px;
+}
+
+.booking-icons-holder img {
+    object-fit: contain;
+}
+
+.statue {
+    background-image: url("../../assets/images/homepage images/liberty.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.statue img {
+    max-width: 13rem;
+}
+
+.eiffel {
+    max-height: 34rem;
+}
+
+.tours {
+    @apply gap-5;
+    display: grid;
+    /* flex-wrap: wrap; */
+    /* justify-items: center; */
+    /* max-width: 90%; */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 200px));
+    grid-auto-rows: 10rem;
+    position: relative;
+    top: -120px;
+}
+
+.image img {
+    object-fit: contain;
+    width: 100%;
+}
+
+
+.dual-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/homepage images/forest.png");
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+
+}
+
+.dual-2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../../assets/images/homepage images/city.png");
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
+
+}
+
+.packages {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
