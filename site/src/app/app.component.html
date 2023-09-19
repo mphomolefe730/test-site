@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+		<app-nav-desktop *ngIf="screenWidth"></app-nav-desktop>
+		<app-nav-mobile *ngIf="!screenWidth"></app-nav-mobile>
     <router-outlet></router-outlet>
 </body>
 </html>

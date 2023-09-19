@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavDesktopComponent } from './nav-desktop/nav-desktop.component';
+import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarouselComponent
+    NavDesktopComponent,
+    NavMobileComponent
   ],
   imports: [
     BrowserModule,
