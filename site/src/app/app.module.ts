@@ -13,7 +13,7 @@ import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    CarouselComponent
+    CarouselComponent,
     NavDesktopComponent,
     NavMobileComponent
   ],
