@@ -1,11 +1,11 @@
 import { Component, HostListener, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-nav',
+  templateUrl: './nav-bar.component.html',
+  styleUrls: ['./nav-bar.component.css']
 })
-export class HomeComponent {
+export class NavComponent {
   menuOpen = false;
   dropdown = false;
   public screenWidth: any = window.innerWidth;

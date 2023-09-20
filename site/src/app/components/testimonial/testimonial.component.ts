@@ -19,7 +19,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
         </div>
     </div>
   `,
-  styleUrls: ['./carousel.component.css'],
+  styleUrls: ['./testimonial.component.css'],
   animations: [
     trigger('fadeIn', [
       transition(':enter', [

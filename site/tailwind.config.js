@@ -8,6 +8,9 @@ module.exports = {
       gridTemplateColumns: {
         'navBarGrid': '1fr 3fr 1fr',
       },
+      screens: {
+        'xs': {'max': '480px'},
+      },
     },
   },
   plugins: [],
