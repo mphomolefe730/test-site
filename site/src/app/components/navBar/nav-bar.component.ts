@@ -1,26 +1,31 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component, HostListener, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavComponent {
+export class NavComponent implements AfterViewInit {
   menuOpen = false;
   dropdown = false;
   public screenWidth: any = window.innerWidth;
-  navbarSolid = false;
+  navbarSolid = 0;
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.screenWidth = window.innerWidth;
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    this.navbarSolid = window.pageYOffset > 50;
+  ngAfterViewInit() {
+    const bodies = this.el.nativeElement.ownerDocument.querySelectorAll('body');
+    const lastBody = bodies[bodies.length - 1];
+
+    this.renderer.listen(lastBody, 'scroll', (event) => {
+      this.navbarSolid = event.target.scrollTop;
+      
+    });
   }
 
   toggleMenu() {

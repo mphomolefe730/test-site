@@ -39,10 +39,10 @@
         <button class="btn1-2">Log In</button>
     </div>
 </div>
-<nav [ngClass]="{'bg-transparent': !navbarSolid, 'bg-gray-700': navbarSolid}" >
+<nav [ngClass]="{'bg-transparent': navbarSolid == 0, 'bg-gray-700': navbarSolid > 0}" >
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center">
-            <h1 class="text-white text-3xl font-semibold">Travel<span class="logo">Hub</span></h1>
+            <h1 class="text-white text-3xl font-semibold">Travel<span class="logo">Vista</span></h1>
         </a>
         <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
             <ul class="bg-transparent flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">

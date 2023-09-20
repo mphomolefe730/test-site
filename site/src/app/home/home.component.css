@@ -100,13 +100,16 @@ body {
     color: white;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-}
 
-::-ms-input-placeholder { /* Microsoft Edge */
+/* Internet Explorer 10-11 */
+/* :-ms-input-placeholder { 
     color: white;
-}
+} */
+
+/* Microsoft Edge */
+/* ::-ms-input-placeholder { 
+    color: white;
+} */
 
 /* ul li a:hover {
     color: #DF6951
@@ -302,6 +305,7 @@ select, .mini-form input {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
+
 
 
 

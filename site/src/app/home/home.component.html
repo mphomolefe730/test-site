@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+    <package-modal [showModal]="showModal" [closeModal]="closeModal" [openModal]="openModal"></package-modal>
+    <!-- ----------------------Scroll To Top Icon------------------------------------------------------------------- -->
+    <!-- <div (click)="scrollToTop()" class=" rounded-tl-full rounded-tr-full z-50 absolute  w-24 h-12 border-2 flex items-center justify-center" style="background-color: #DF6951; border-color: #DF6951; transform: rotate(270deg); right: -26px; bottom: 5.5rem;">
+        <span class="material-symbols-outlined" style="font-size: 37px; color:white; transform: rotate(90deg); top: 2px; left: -2px; position: relative;">
+            keyboard_arrow_up
+        </span>
+    </div> -->
+    <!-- ----------------------------------------------------------------------------------------------------------- -->
     <div id="header">
         <app-nav></app-nav> 
         <div id="hero" class="md:px-20 px-5">
@@ -24,7 +32,7 @@
                 <select disabled  name="" id="" class="bg-transparent text-white">
                     <option value="">Duration</option>
                 </select> 
-                <button class="btn1 sm:w-4/6 w-full text-sm">Build Package</button>
+                <button (click)="openModal()" class="btn1 sm:w-4/6 w-full text-sm">Build Package</button>
             </div>
             <div class="flex flex-col sm:flex-row items-center sm:gap-5 gap-3 xs:hidden">
                 <div class="flex -space-x-2">
@@ -166,27 +174,32 @@
                     <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum sequi similique blanditiis veniam modi minus quis ea placeat quidem nisi, voluptate molestias illum, laudantium distinctio, tenetur animi delectus at corrupti?</p>
                     <button class="btn1">View Packages</button>
                 </div>
-                <div class="tours sm:p-10 p-5 place-items-center justify-self-center">
-                    <div class="image h-full relative">
-                        <img src="../../assets/images/homepage images/tours/Rectangle 19295.png" alt="" class="w-full h-full">
-                        <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Paris</div>
+                <div class="grid grid-rows-2">
+                    <div class="tours sm:p-10 p-5">
+                        <div class="image h-full relative">
+                            <img src="../../assets/images/homepage images/tours/Rectangle 19295.png" alt="" class="w-full h-full">
+                            <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Paris</div>
+                        </div>
+                        <div class="image h-full relative">
+                            <img src="../../assets/images/homepage images/tours/Rectangle 19296.png" alt="" class="w-full h-full">
+                            <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Sweden</div>
+                        </div>
+                        <div class="image h-full relative">
+                            <img src="../../assets/images/homepage images/tours/Rectangle 19297.png" alt="" class="w-full h-full">
+                            <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Rome</div>
+                        </div>
+                        <div class="image h-full relative">
+                            <img src="../../assets/images/homepage images/tours/Rectangle 19298.png" alt="" class="w-full h-full">
+                            <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Italy</div>
+                        </div>
                     </div>
-                    <div class="image h-full relative">
-                        <img src="../../assets/images/homepage images/tours/Rectangle 19296.png" alt="" class="w-full h-full">
-                        <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Sweden</div>
-                    </div>
-                    <div class="image h-full relative">
-                        <img src="../../assets/images/homepage images/tours/Rectangle 19297.png" alt="" class="w-full h-full">
-                        <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Rome</div>
-                    </div>
-                    <div class="image h-full relative">
-                        <img src="../../assets/images/homepage images/tours/Rectangle 19298.png" alt="" class="w-full h-full">
-                        <div class="absolute top-2 right-2 px-3 py-1 rounded-xl text-center" style="background-color: #DF6951; color: white;">Italy</div>
+                    <div class="sm:px-10 px-5">
+                        <button class="btn2 xs:w-11/12 w-full">See More</button>
                     </div>
                 </div>
-                <div class="sm:px-10 px-5">
-                    <button class="btn2 xs:w-11/12 w-64">See More</button>
-                </div>
+                <!-- <div class="sm:px-10 px-5">
+                    <button class="btn2 xs:w-11/12 w-full">See More</button>
+                </div> -->
             </div>
             <img src="../../assets/images/homepage images/tours/eiffel.png" alt="" class="eiffel hidden lg:inline">
         </div>

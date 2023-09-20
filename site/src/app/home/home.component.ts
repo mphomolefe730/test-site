@@ -1,38 +1,25 @@
-import { Component, HostListener, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  menuOpen = false;
-  dropdown = false;
-  public screenWidth: any = window.innerWidth;
-  navbarSolid = false;
+  showModal = false;
 
-  constructor(private el: ElementRef) {}
+  scrollToTop() {
+    const doc = document.querySelectorAll("body");
+    doc[doc.length - 1].scrollTo({top: 0, behavior: "smooth"});
+  }
+  
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.screenWidth = window.innerWidth;
+  openModal = (): void => {
+    this.showModal = true;
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    this.navbarSolid = window.pageYOffset > 50;
+  closeModal = (): void => {
+    this.showModal = false;
   }
 
-  toggleMenu() {
-    this.menuOpen = !this.menuOpen;
-  }
-
-  closeMenu() {
-    this.menuOpen = false;
-    this.dropdown = false;
-  }
-
-  toggleDropdown() {
-    this.dropdown = !this.dropdown;
-  }
 }
