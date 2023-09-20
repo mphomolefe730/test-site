@@ -2,9 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-}
+
 
 .material-symbols-outlined {
     cursor: pointer;
