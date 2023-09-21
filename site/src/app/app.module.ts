@@ -4,17 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './components/testimonial/testimonial.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavDesktopComponent } from './nav-desktop/nav-desktop.component';
 import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
 import { NavComponent } from './components/navBar/nav-bar.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     HomeComponent,
     CarouselComponent,
-    NavDesktopComponent,
     NavMobileComponent,
     NavComponent,
     ActivitiesComponent,
@@ -26,6 +26,6 @@ import { PackageModalComponent } from './components/package-modal/package-modal.
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
