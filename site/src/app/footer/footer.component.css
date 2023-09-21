@@ -1,0 +1,106 @@
+footer {
+    padding: 5rem;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
+}
+
+.info {
+    margin-top: 5rem;
+}
+
+.footer-container .info i {
+    margin: 0px 10px 0px 10px;
+    color: rgb(255, 99, 60);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.footer-container ul li {
+    margin: 20px 0px;
+}
+
+.footer-container ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.uniq-one, .uniq-two {
+    margin: 0;
+    padding: 0;
+}
+
+.last-column {
+    float: right;
+    margin-top: 1.1rem;
+}
+
+.footer-container form #email {
+    border: none;
+    background-color: lightgrey;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.footer-container form .subscribe-btn {
+    color: white;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    padding: 20px 30px;
+    background-color: rgb(255, 99, 60);
+    margin-top: 10px;
+}
+
+.last-list {
+    list-style-type: symbols('*');
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-details {
+    text-align: center;
+}
+
+.footer-container .last-column #email {
+    width: 200px;
+}
+
+.footer-container .last-column ::placeholder {
+    padding: 10px;
+}
+
+.footer-container hr {
+    background-color: rgb(243, 243, 243);
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        display: block;
+    }
+    
+    .footer-container .last-column {
+        float: none;
+        margin-top: 2rem;
+    }
+
+    .footer-container form .subscribe-btn {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}

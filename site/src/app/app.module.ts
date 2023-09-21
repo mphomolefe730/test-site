@@ -5,6 +5,9 @@ import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './components/testimonial/testimonial.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
+========
+import { FooterComponent } from './footer/footer.component';
+=======
 import { NavComponent } from './components/navBar/nav-bar.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
