@@ -1,0 +1,43 @@
+#search{
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding: 0 10px;
+    height: 7.5%;
+}
+
+#search input, #search button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 0 5px;
+    height: 100%;
+    border: 0;
+    border-radius: var(--primaryRadius);
+    background-color: var(--transparentColor);
+}
+#search button{
+    background-color: var(--primaryColor);
+}
+
+#formEntry{
+    margin-top: 10px;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    margin-bottom: 10px;
+}
+#quantityEntry{
+    max-width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#quantityEntry input{
+    max-width: 10px;
+}
+#quantityEntry span{
+    display: flex;
+    align-items: center;
+    max-width: 20px;
+}

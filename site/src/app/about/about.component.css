@@ -1,0 +1,93 @@
+#about-header {
+    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/images/about-page images/Rectangle 19290.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-xl
+}
+
+.btn1-2 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded
+}
+
+.btn2 {
+    @apply p-3 rounded bg-transparent;
+    color: #DF6951; 
+    border: 1px solid #DF6951;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: #DF6951;
+}
+
+.outline-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @apply p-3 rounded-xl;
+    transition: all .2s;
+    
+}
+
+.outline-btn:hover {
+    background-color: #DF6951;
+    border-color: #DF6951;
+}
+
+#about-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-us-text {
+    font-family: 'Dancing Script', cursive;
+}
+
+
+
+.image-section {
+    background-image: url("../../assets/images/about-page images/Rectangle 19353.png");
+    background-position: center;
+    background-position-y: 0px;
+    background-size: cover;
+    position: relative;
+    background-repeat: no-repeat;
+    font-family: 'Dancing Script', cursive;
+}
+
+.percentages img {
+    max-height: 120px;
+}
+
+@media (max-width: 380px) {
+    .percentages img {
+        max-height: 90px;
+    }
+}
+
+.popular-tour-plans-img {
+    display: inline;
+}
+
+@media (max-width: 960px) {
+    .popular-tour-plans-img {
+        display: none;
+    }
+}
+
+@media (max-width: 1087px) and (min-width: 954px) {
+    .popular-tour-plans-img-2 {
+        width: 150px;
+    }
+}

@@ -1,0 +1,78 @@
+nav {
+    @apply fixed top-0 z-50;
+    width: 100%;
+    transition: .3s;
+}
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-xl
+}
+
+.logo {
+    color: #DF6951;
+}
+
+ul li a:hover {
+    color: #DF6951
+}
+
+.btn1-2 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded
+}
+
+.btn2 {
+    @apply p-3 rounded bg-transparent;
+    color: #DF6951; 
+    border: 1px solid #DF6951;
+    transition: .3s;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: #DF6951;
+}
+.outline-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @apply p-3 rounded-xl;
+    transition: all .2s;
+    
+}
+
+.outline-btn:hover {
+    background-color: #DF6951;
+    border-color: #DF6951;
+}
+#dropdownNavbar {
+    display: none;
+}
+
+#dropdownNavbarLink:hover .dropdown-btn  {
+    color: #DF6951;
+}
+
+#dropdownNavbarLink:hover #dropdownNavbar {
+    display: grid;
+}
+
+@media (min-width: 1024px) {
+    .menu {
+        display: none;
+    }
+}
+
+.menu {
+    cursor: pointer;
+}
+
+active{
+    border: 2px solid var(--primaryColor);
+}
+/* .home {
+    color: #DF6951;
+} */

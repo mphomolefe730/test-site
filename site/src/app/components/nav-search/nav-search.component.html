@@ -1,0 +1,23 @@
+<div id="search">
+    <input value="search...">
+    <button>
+        <span class="material-symbols-outlined">
+        search
+        </span>
+    </button>
+</div>
+<div id="formEntry" *ngFor="let items of catergories">
+    <div>
+        <h1>{{ items.name }}</h1>
+        <p>{{ items.details }}</p>
+    </div>
+    <div id="quantityEntry">
+        <span *ngIf='-1>0'class="material-symbols-outlined">
+            remove_circle
+        </span>
+        <span> {{ items.quantity }}</span>
+        <span (click)="addFunction()" class="material-symbols-outlined">
+            add_circle
+        </span>
+    </div>
+</div>

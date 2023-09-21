@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
 @Component({
-  selector: 'app-carousel',
+  selector: 'app-testimonial',
   template: `
+  <div class="testimonials-section flex flex-col items-center justify-center sm:px-16 px-5 py-10 relative" style="background-color: #F9F8F9;">
+    <p style="color: #DF6951;" class="font-semibold mb-2">TESTIMONIALS</p>
+    <h1 class="text-4xl mb-10 font-bold text-center relative z-10" style="color: rgba(24, 30, 75, 1);">See What Our Clients Say About Us</h1>
     <div class="testimonials w-full sm:p-16 p-5">
         <div class="testimonial bg-white relative rounded-xl h-auto w-full md:px-14 px-10 pt-20 pb-10">
             <img (click)="goToLeft()"  src="../../assets/images/homepage images/testimonials/left.png" class="left" alt="">
@@ -18,6 +21,10 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
             </ng-container>
         </div>
     </div>
+    <img src="../../assets/images/homepage images/testimonials/travel-gear.png" class="absolute bottom-0 left-0 sm:w-52 w-32" alt="">
+    <img src="../../assets/images/homepage images/testimonials/photo.png" class="absolute right-4 sm:w-52 w-32 hidden lg:inline" style="top: -62px;" alt="">
+  </div>
+    
   `,
   styleUrls: ['./testimonial.component.css'],
   animations: [
@@ -30,7 +37,7 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
   ],
 })
 
-export class CarouselComponent {
+export class TestimonialComponent {
   activeIndex = 0;
   items = [
     {

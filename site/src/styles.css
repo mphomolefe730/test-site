@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Dancing+Script:wght@500&family=Inconsolata&family=Inter&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,11 +10,20 @@
     --transparentColor: rgba(217,217,217,0.2);
     --primaryRadius: 10%;
 }
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat','Poppins';
-    overflow-x: hidden;
-}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; 
+    overflow-x: hidden;
+    font-family: 'Roboto', 
+    "Helvetica Neue", 'sans-serif', 'Montserrat','Poppins';
+}
+
+.subheading-h1 {
+    @apply  text-4xl mb-4 font-bold;
+    color: rgba(24, 30, 75, 1);
+}
+
+.subheading-p {
+    color: #DF6951;
+    @apply font-semibold mb-2 ;
+}

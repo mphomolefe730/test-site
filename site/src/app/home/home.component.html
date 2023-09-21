@@ -1,19 +1,26 @@
+
 <package-modal [showModal]="showModal" [closeModal]="closeModal" [openModal]="openModal"></package-modal>
+<!-- ----------------------Scroll To Top Icon------------------------------------------------------------------- -->
+<!-- <div (click)="scrollToTop()" class=" rounded-tl-full rounded-tr-full z-50 absolute  w-24 h-12 border-2 flex items-center justify-center" style="background-color: #DF6951; border-color: #DF6951; transform: rotate(270deg); right: -26px; bottom: 5.5rem;">
+    <span class="material-symbols-outlined" style="font-size: 37px; color:white; transform: rotate(90deg); top: 2px; left: -2px; position: relative;">
+        keyboard_arrow_up
+    </span>
+</div> -->
 <!-- ----------------------------------------------------------------------------------------------------------- -->
 <div id="header">
     <div id="hero" class="md:px-20 px-5">
         <img src="../../assets/images/homepage images/Vector 1.png" alt="" class="w-14">
         <h1 class="sm:text-5xl text-4xl font-semibold w-full lg:w-9/12 leading-tight text-white">No matter where you're going to, we'll take you there</h1>
         <div class="mini-form">
-            <select disabled  name="" id="" class="bg-transparent text-white" >
+            <select (click)="openModal()" name="" id="" class="bg-transparent text-white" >
                 <option value="">Where to?</option>
             </select>
             <div class="divider hidden sm:block"></div>
-            <select disabled  name="" id="" class="bg-transparent text-white">
+            <select (click)="openModal()"  name="" id="" class="bg-transparent text-white">
                 <option value="">Travel Type</option>
             </select>
             <div class="divider hidden sm:block"></div>
-            <select disabled  name="" id="" class="bg-transparent text-white">
+            <select (click)="openModal()"  name="" id="" class="bg-transparent text-white">
                 <option value="">Duration</option>
             </select> 
             <button (click)="openModal()" class="btn1 sm:w-4/6 w-full text-sm">Build Package</button>
@@ -368,13 +375,7 @@
 </div>
 
 <!-- -----------------------------------TESTIMONIALS----------------------------------------------------- -->
-
-<div class="testimonials-section flex flex-col items-center justify-center sm:px-16 px-5 py-10 relative" style="background-color: #F9F8F9;">
-    <p style="color: #DF6951;" class="font-semibold mb-2">TESTIMONIALS</p>
-    <h1 class="text-4xl mb-10 font-bold text-center relative z-10" style="color: rgba(24, 30, 75, 1);">See What Our Clients Say About Us</h1>
-    <app-carousel></app-carousel>
-    <img src="../../assets/images/homepage images/testimonials/travel-gear.png" class="absolute bottom-0 left-0 sm:w-52 w-32" alt="">
-    <img src="../../assets/images/homepage images/testimonials/photo.png" class="absolute right-4 sm:w-52 w-32 hidden lg:inline" style="top: -62px;" alt="">
-</div>
+<app-testimonial></app-testimonial>
 
 
+<app-footer></app-footer>
