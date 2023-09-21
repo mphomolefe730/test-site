@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavMobileComponent } from './nav-mobile.component';
+import { NavBarComponent } from './nav-bar.component';
 
-describe('NavMobileComponent', () => {
-  let component: NavMobileComponent;
-  let fixture: ComponentFixture<NavMobileComponent>;
+describe('NavBarComponent', () => {
+  let component: NavBarComponent;
+  let fixture: ComponentFixture<NavBarComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavMobileComponent]
+      declarations: [NavBarComponent]
     });
-    fixture = TestBed.createComponent(NavMobileComponent);
+    fixture = TestBed.createComponent(NavBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,11 +9,10 @@
     --transparentColor: rgba(217,217,217,0.2);
     --primaryRadius: 10%;
 }
-body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat','Poppins';
-    overflow-x: hidden;
-}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; 
+    overflow-x: hidden;
+    font-family: 'Roboto', 
+    "Helvetica Neue", 'sans-serif', 'Montserrat','Poppins';
+}

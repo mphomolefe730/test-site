@@ -4,26 +4,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CarouselComponent } from './components/testimonial/testimonial.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
-========
-import { FooterComponent } from './footer/footer.component';
-=======
-import { NavComponent } from './components/navBar/nav-bar.component';
+import { NavBottomComponent } from './core/nav-bottom/nav-bottom.component';
+import { FooterComponent } from './core/footer/footer.component';
+import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
 import { AppComponent } from './app.component';
-// import { NavSearchComponent } from './components/nav-search/nav-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CarouselComponent,
-    NavMobileComponent,
-    NavComponent,
+    NavBottomComponent,
+    NavBarComponent,
+    FooterComponent,
     ActivitiesComponent,
     PackageModalComponent,
-    // NavSearchComponent
   ],
   imports: [
     BrowserModule,

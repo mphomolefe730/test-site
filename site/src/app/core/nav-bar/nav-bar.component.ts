@@ -5,7 +5,7 @@ import { Component, HostListener} from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavComponent {
+export class NavBarComponent {
   menuOpen = false;
   dropdown = false;
   public screenWidth: any = window.innerWidth;
