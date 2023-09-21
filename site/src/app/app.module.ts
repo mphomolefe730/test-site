@@ -9,6 +9,7 @@ import { NavComponent } from './components/navBar/nav-bar.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
 import { AppComponent } from './app.component';
+// import { NavSearchComponent } from './components/nav-search/nav-search.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     NavMobileComponent,
     NavComponent,
     ActivitiesComponent,
-    PackageModalComponent
+    PackageModalComponent,
+    // NavSearchComponent
   ],
   imports: [
     BrowserModule,

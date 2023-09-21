@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavDektopComponent } from './nav-dektop.component';
+import { NavSearchComponent } from './nav-search.component';
 
-describe('NavDektopComponent', () => {
-  let component: NavDektopComponent;
-  let fixture: ComponentFixture<NavDektopComponent>;
+describe('NavSearchComponent', () => {
+  let component: NavSearchComponent;
+  let fixture: ComponentFixture<NavSearchComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavDektopComponent]
+      declarations: [NavSearchComponent]
     });
-    fixture = TestBed.createComponent(NavDektopComponent);
+    fixture = TestBed.createComponent(NavSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

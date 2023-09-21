@@ -12,15 +12,15 @@
         <img src="../../assets/images/homepage images/Vector 1.png" alt="" class="w-14">
         <h1 class="sm:text-5xl text-4xl font-semibold w-full lg:w-9/12 leading-tight text-white">No matter where you're going to, we'll take you there</h1>
         <div class="mini-form">
-            <select disabled  name="" id="" class="bg-transparent text-white" >
+            <select (click)="openModal()" name="" id="" class="bg-transparent text-white" >
                 <option value="">Where to?</option>
             </select>
             <div class="divider hidden sm:block"></div>
-            <select disabled  name="" id="" class="bg-transparent text-white">
+            <select (click)="openModal()"  name="" id="" class="bg-transparent text-white">
                 <option value="">Travel Type</option>
             </select>
             <div class="divider hidden sm:block"></div>
-            <select disabled  name="" id="" class="bg-transparent text-white">
+            <select (click)="openModal()"  name="" id="" class="bg-transparent text-white">
                 <option value="">Duration</option>
             </select> 
             <button (click)="openModal()" class="btn1 sm:w-4/6 w-full text-sm">Build Package</button>
