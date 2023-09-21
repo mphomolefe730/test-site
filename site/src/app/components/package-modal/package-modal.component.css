@@ -1,0 +1,27 @@
+
+.modal-holder {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#floating_filled:focus {
+    border-color: #DF6951;
+}
+
+.label-filled:focus {
+    color: #DF6951;
+}
+
+
+input {
+    outline: none;
+}
+
+.date-range {
+    @apply text-gray-400
+}
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-md
+}
