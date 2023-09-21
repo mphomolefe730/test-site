@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { CarouselComponent } from './components/carousel/carousel.component';
+import { CarouselComponent } from './components/testimonial/testimonial.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
-import { NavDektopComponent } from './nav-dektop/nav-dektop.component';
+import { NavComponent } from './components/navBar/nav-bar.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
+import { PackageModalComponent } from './components/package-modal/package-modal.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { NavDektopComponent } from './nav-dektop/nav-dektop.component';
     HomeComponent,
     CarouselComponent,
     NavMobileComponent,
-    NavDektopComponent
+    NavComponent,
+    ActivitiesComponent,
+    PackageModalComponent
   ],
   imports: [
     BrowserModule,

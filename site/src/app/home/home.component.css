@@ -2,9 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
-}
+
 
 .material-symbols-outlined {
     cursor: pointer;
@@ -15,11 +13,6 @@ body {
     'opsz' 48
 }
 
-@media (min-width: 1024px) {
-    .menu {
-        display: none;
-    }
-}
 
 #header {
     height: 100vh;
@@ -35,6 +28,29 @@ body {
     @apply p-3 rounded-xl
 }
 
+.btn1-2 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded
+}
+
+.buttons {
+    /* width: 85%; */
+}
+
+.btn2 {
+    @apply p-3 rounded bg-transparent;
+    color: #DF6951; 
+    border: 1px solid #DF6951;
+    transition: .3s;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: #DF6951;
+}
+
+
 .outline-btn {
     background-color: transparent;
     color: white;
@@ -49,9 +65,7 @@ body {
     border-color: #DF6951;
 }
 
-.logo {
-    color: #DF6951;
-}
+
 
 
 
@@ -66,8 +80,8 @@ body {
     background: rgba(243, 243, 243, 0.3);
     border-radius: 7px;
     backdrop-filter: blur(3px);
-    grid-template-columns: repeat(4, 1fr);
-    @apply p-2 mt-5 mb-3 w-full lg:w-3/4 flex justify-between items-center gap-3;
+    /* grid-template-columns: repeat(4, 1fr); */
+    @apply p-2 mt-5 mb-3 w-11/12 xs:w-full lg:w-3/4 flex flex-col sm:flex-row justify-between items-center gap-3;
 }
 
 .mini-form input {
@@ -84,22 +98,25 @@ body {
     color: white;
 }
 
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: white;
-}
 
-::-ms-input-placeholder { /* Microsoft Edge */
+/* Internet Explorer 10-11 */
+/* :-ms-input-placeholder { 
     color: white;
-}
+} */
 
-ul li a:hover {
+/* Microsoft Edge */
+/* ::-ms-input-placeholder { 
+    color: white;
+} */
+
+/* ul li a:hover {
     color: #DF6951
-}
+} */
 
 .home {
     color: #DF6951;
 }
-
+/* 
 #dropdownNavbar {
     display: none;
 }
@@ -110,15 +127,13 @@ ul li a:hover {
 
 #dropdownNavbarLink:hover #dropdownNavbar {
     display: grid;
-}
+} */
 
 select, .mini-form input {
     width: 100%;
 }
 
-.mini-form button {
-    width: 70%;
-}
+
 
 .logos {
     background: rgba(247, 247, 247, 1);
@@ -155,11 +170,66 @@ select, .mini-form input {
     color: rgba(24, 30, 75, 1);
 }
 
-.bookings, .honeymoon, .tours-section {
+.bookings, .honeymoon {
     display: grid;
     /* flex-wrap: wrap; */
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.tours-section {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
+}
+/* 
+@media (min-width: 768px) and (max-width: 1060px) {
+    .tours {
+        grid-area: tours
+    }
+
+    .eiffel {
+        grid-area: eiffel;
+    }
+
+    .tours-heading {
+        grid-area: tours-heading;
+    }
+    .tours-section {
+        display: grid;
+        grid-template-areas: 
+        "tours-heading eiffel"
+        "tours tours";
+    }
+} */
+
+.eiffel {
+    max-height: 34rem;
+}
+
+.tours {
+    @apply gap-5;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-items: center; */
+    /* max-width: 90%; */
+    /* grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+    grid-auto-rows: 10rem; */
+    position: relative;
+    /* top: -120px; */
+}
+
+
+.image img {
+    object-fit: contain;
+    max-width: 160px;
+}
+
+.image div {
+    /* min-width: 60%; */
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .honeymoon img {
@@ -177,30 +247,37 @@ select, .mini-form input {
     position: relative;
 }
 
+@media (max-width: 720px) {
+    .statue {
+        background-image: url("../../assets/images/homepage images/liberty.png");
+        background-position: -500px;
+        background-size: cover;
+        position: relative;
+    }
+}
+
+@media (max-width: 550px) {
+    .statue {
+        background-image: url("../../assets/images/homepage images/liberty.png");
+        background-position: -600px;
+        background-size: cover;
+        position: relative;
+    }
+}
+
+@media (max-width: 450px) {
+    .statue {
+        background-image: url("../../assets/images/homepage images/liberty.png");
+        background-position: -700px;
+        background-size: cover;
+        position: relative;
+    }
+}
+
 .statue img {
     max-width: 13rem;
 }
 
-.eiffel {
-    max-height: 34rem;
-}
-
-.tours {
-    @apply gap-5;
-    display: grid;
-    /* flex-wrap: wrap; */
-    /* justify-items: center; */
-    /* max-width: 90%; */
-    grid-template-columns: repeat(auto-fit, minmax(130px, 200px));
-    grid-auto-rows: 10rem;
-    position: relative;
-    top: -120px;
-}
-
-.image img {
-    object-fit: contain;
-    width: 100%;
-}
 
 
 .dual-1 {
@@ -226,3 +303,7 @@ select, .mini-form input {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
+
+
+
+
