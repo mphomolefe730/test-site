@@ -7,6 +7,32 @@
     justify-content: center;
 }
 
+@media (max-width: 480px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 150px));
+        grid-auto-rows: 150px;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .image-info {
+        @apply text-xs;
+    }
+    
+}
+
+@media (max-width: 380px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 120px));
+        grid-auto-rows: 120px;
+        gap: 15px;
+        justify-content: center;
+    }
+    
+}
+
 .container img {
     height: 100%;
     width: 100%;

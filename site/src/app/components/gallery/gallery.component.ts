@@ -10,7 +10,7 @@ import { Component } from "@angular/core";
             alt="gallery"
             class="rounded-lg object-cover object-center"
             [src]="item.image" />
-            <div class="image-info flex px-4 justify-between">
+            <div class="image-info flex px-2 justify-between gap-4 items-center">
                 <p>{{item.country}}</p>
                 <p>{{item.price}}</p>
             </div>

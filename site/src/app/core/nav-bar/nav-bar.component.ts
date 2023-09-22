@@ -1,4 +1,6 @@
 import { Component, HostListener} from '@angular/core';
+import { NavBarService } from './nav-bar.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -6,6 +8,11 @@ import { Component, HostListener} from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+  public showNav: Observable<boolean>;
+  constructor(private navbarService: NavBarService) {
+    this.showNav = this.navbarService.showNav.asObservable();
+  }
+
   menuOpen = false;
   dropdown = false;
   public screenWidth: any = window.innerWidth;

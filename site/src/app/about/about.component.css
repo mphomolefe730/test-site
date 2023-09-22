@@ -54,18 +54,30 @@
     font-family: 'Dancing Script', cursive;
 }
 
-
-
 .image-section {
     background-image: url("../../assets/images/about-page images/Rectangle 19353.png");
-    background-position: center;
     background-position-y: 0px;
+    background-position-x: 0px;
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
     font-family: 'Dancing Script', cursive;
 }
 
+
+
+@media (max-width:640px) {
+    .image-section {
+        background-image: linear-gradient(rgba, rgba(0, 0, 0, 0.3)(0, 0, 0, 0.3)), ("../../assets/images/about-page images/Rectangle 19353.png");
+        background-size: cover;
+        background-position-y: 0px;
+        background-position-x: 0px;
+        position: relative;
+        background-repeat: no-repeat;
+        font-family: 'Dancing Script', cursive;
+    }
+    
+}
 .percentages img {
     max-height: 120px;
 }
