@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavSearchComponent } from './nav-search.component';
+import { HistoryComponent } from './history.component';
 
-describe('NavSearchComponent', () => {
-  let component: NavSearchComponent;
-  let fixture: ComponentFixture<NavSearchComponent>;
+describe('HistoryComponent', () => {
+  let component: HistoryComponent;
+  let fixture: ComponentFixture<HistoryComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [NavSearchComponent]
+      declarations: [HistoryComponent]
     });
-    fixture = TestBed.createComponent(NavSearchComponent);
+    fixture = TestBed.createComponent(HistoryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

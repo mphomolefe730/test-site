@@ -1,0 +1,10 @@
+div {
+    margin-top: 65px;
+    padding: 7.5px;
+}
+
+@media (min-width: 600px){
+    div{
+        display: flex;
+    }
+}

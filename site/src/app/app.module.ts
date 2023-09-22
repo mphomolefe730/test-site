@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { CarouselComponent } from './components/testimonial/testimonial.component';
+import { TestimonialComponent } from './components/testimonial/testimonial.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBottomComponent } from './core/nav-bottom/nav-bottom.component';
 import { FooterComponent } from './core/footer/footer.component';
@@ -11,23 +11,29 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
 import { TravelWithUsComponent } from './travel-with-us/travel-with-us.component';
 import { AppComponent } from './app.component';
+import { AboutComponent } from './about/about.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    CarouselComponent,
+    TestimonialComponent,
     NavBottomComponent,
     NavBarComponent,
     FooterComponent,
     ActivitiesComponent,
     PackageModalComponent,
-    TravelWithUsComponent
+    
+    TravelWithUsComponent,
+    
+    AboutComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
