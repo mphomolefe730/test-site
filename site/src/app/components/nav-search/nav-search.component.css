@@ -1,9 +1,9 @@
 #search{
-    margin-top: 75px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 5fr 1fr;
     gap: 5px;
-    /* padding: 0 10px; */
+    padding: 0 10px;
     height: 7.5%;
 }
 #search input, #search button{
@@ -21,8 +21,10 @@
 }
 
 #formEntry{
+    background-color: white;
+    border-radius: 10px;
     margin-top: 10px;
-    padding: 2px;
+    padding: 2px 10px;
     display: grid;
     grid-template-columns: 6fr 2fr;
     margin-bottom: 10px;

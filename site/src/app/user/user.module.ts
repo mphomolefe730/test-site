@@ -5,13 +5,15 @@ import { UserRoutingModule } from './user-routing.module';
 import { SettingsComponent } from './settings/settings.component';
 import { HistoryComponent } from './history/history.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 
 @NgModule({
   declarations: [
     SettingsComponent,
     HistoryComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    WalletComponent,
   ],
   imports: [
     CommonModule,

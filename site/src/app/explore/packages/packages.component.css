@@ -1,0 +1,131 @@
+.container{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    max-height: 80%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    /* scrollbar-color: white; */
+    scrollbar-width: 0;
+}
+
+.container .travel-img{
+    background-image: url("/assets/images/thumbnails/Rectangle\ 19290\(1\).png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    text-align: center;
+    padding: 75px 0;
+}
+
+.container .travel-img .above-header, .container .travel-img .header {
+    margin: 0;
+}
+
+.container .travel-img .header {
+    font-family: Yesteryear;
+    font-size: 72px;
+}
+
+.container .filter-container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+    height: 10%;
+}
+.container .filter{
+    display: flex;
+    width: 100%;
+    /* max-width: 60%; */
+    padding:0 30px;
+    background-color: lightgrey;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .filter p{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    min-width: 75px;
+}
+.container .filter p span{
+    scale: 1;
+}
+/*-------------items-------------*/
+
+.contents-container {
+    display: grid;
+    /*min width is 250px if theres space, add more items next to it*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:10px;
+    padding: 0 10px;
+    /* background-color: blue; */
+    margin-bottom: 50px;
+
+    /* max-width: 60%; */
+}
+.contents-container .grid-item{
+    margin: 5px 0;
+    /* border: 2px solid var(--transparentColor);
+    background-color: aqua; */
+}
+
+.contents-container .grid-item img,
+.contents-container .grid-item p{
+    width: 100%;
+}
+.contents-container .grid-item .under-content{
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    align-items: center;
+    background-color: var(--primaryColor);
+}
+
+.contents-container .grid-item  h1{
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-size: larger;
+}
+
+/* #priceSection{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+} */
+.button-container {
+    display: flex;
+    justify-content: center;
+    /* margin-top: -190px; */
+    margin-bottom: 10px;
+}
+
+.button-container .btn button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px;
+    transition: 1s;
+}
+
+.button-container .btn button:hover {
+    background-color: lightgrey;
+    /* border-radius: 50%; */
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+    .container .travel-img{
+        display: none;
+    }
+
+    .container .filter-container {
+        display: none;
+    }
+
+}

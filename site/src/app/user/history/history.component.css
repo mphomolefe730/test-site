@@ -1,0 +1,20 @@
+#noHistory{
+    min-height: 45%;
+    overflow-y: scroll;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid gray; */
+    border-radius: 10px;
+    /* background-color: blue; */
+}
+#noHistory div{
+    text-align: center;
+}
+
+#noHistory div span{
+    scale:2;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,30 @@
+<h1>CARDS</h1>
+<hr style="margin: 10px 0;">
+<div id="cardContainer">
+    <hr>
+    <div id="card" *ngFor="let card of cardInformation">
+        <div class="heading">
+            <h1>Master Card</h1>
+            <i style="scale: 2" class="fa-brands fa-cc-mastercard"></i>
+        </div>
+        <div>
+            <input placeholder="{{card.number}}" type="password" id="cardNumber"/>
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Number</span>
+        </div>
+        <div>
+            <input placeholder="{{ card.date }}" type="text"/>
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Date</span>
+            <input placeholder="{{ card.cvv }}" type="number">
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card CVV</span>
+        </div>
+        <div class="heading">
+            <button style="background-color: red;">Delete</button>
+            <button style="background-color: green;">Save</button>
+        </div>
+    </div>
+</div>
+<h1>TRANSACTIONS</h1>
+<hr style="margin: 10px 0;"/>
+<ul>
+    <li *ngFor="let info of activities"></li>
+</ul>
