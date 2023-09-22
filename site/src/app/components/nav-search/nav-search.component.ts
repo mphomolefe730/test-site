@@ -1,11 +1,16 @@
 import { Component, HostListener } from '@angular/core';
+import { BaseComponent } from 'src/app/core/nav-bar/base.component';
+import { NavBarService } from 'src/app/core/nav-bar/nav-bar.service';
 
 @Component({
   selector: 'app-nav-search',
   templateUrl: './nav-search.component.html',
   styleUrls: ['./nav-search.component.css']
 })
-export class NavSearchComponent {
+export class NavSearchComponent extends BaseComponent {
+  constructor(navbarService: NavBarService) { 
+    super(navbarService);
+  }
   inputField = false;
   catergories=[
     {name: 'Adults', details: 'Ages 13 or above', quantity:0, status:false},
@@ -25,4 +30,5 @@ export class NavSearchComponent {
     this.catergories[index].quantity -=1;
     if (this.catergories[index].quantity == 0) this.catergories[index].status=false;
   };
+
 }
