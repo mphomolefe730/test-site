@@ -5,8 +5,8 @@
         close
     </span>
     <ul class="text-white flex flex-col gap-5">
-        <li routerLink="/explore" routerLinkActive="active">Home</li>
-        <li><a href="">About</a></li>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
         <li (click)="toggleDropdown()" class="relative">
         <div class="flex items-center">
             <a>Services</a>
@@ -47,10 +47,10 @@
         <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
             <ul class="bg-transparent flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0">
                 <li>
-                    <a href="#" class="home block py-2 pl-3 pr-4 text-white rounded md:bg-transparent  md:p-0" aria-current="page">Home</a>
+                    <a routerLink="/home" routerLinkActive="active" class="home block py-2 pl-3 pr-4 text-white rounded md:bg-transparent  md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white">About</a>
+                    <a routerLink="/about" routerLinkActive="active" class="block py-2 pl-3 pr-4 rounded md:border-0 md:p-0 text-white">About</a>
                 </li>
                 <li id="dropdownNavbarLink">
                     <button class="dropdown-btn flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded md:border-0 md:p-0 md:w-auto">Services <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
