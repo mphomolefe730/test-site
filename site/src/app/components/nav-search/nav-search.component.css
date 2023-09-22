@@ -2,19 +2,18 @@
     margin-top: 75px;
     display: grid;
     grid-template-columns: 5fr 1fr;
-    padding: 0 10px;
+    gap: 5px;
+    /* padding: 0 10px; */
     height: 7.5%;
 }
-
 #search input, #search button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
     padding: 0 5px;
     height: 100%;
     border: 0;
-    border-radius: var(--primaryRadius);
+    border-radius: 20px;
     background-color: var(--transparentColor);
 }
 #search button{
@@ -23,7 +22,7 @@
 
 #formEntry{
     margin-top: 10px;
-    padding: 0 10px;
+    padding: 2px;
     display: grid;
     grid-template-columns: 6fr 2fr;
     margin-bottom: 10px;
@@ -40,4 +39,15 @@
     display: flex;
     align-items: center;
     max-width: 20px;
+}
+h1{
+    margin: 0;
+    font-weight: 800;
+}
+span:hover{
+    cursor: pointer;
+}
+p{
+    font-family: 'poppins';
+    font-weight: 300;
 }
