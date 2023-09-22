@@ -9,6 +9,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { NavBarComponent } from './core/nav-bar/nav-bar.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
 import { PackageModalComponent } from './components/package-modal/package-modal.component';
+import { TravelWithUsComponent } from './travel-with-us/travel-with-us.component';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
@@ -23,8 +24,11 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     FooterComponent,
     ActivitiesComponent,
     PackageModalComponent,
+    
+    TravelWithUsComponent,
+    
     AboutComponent,
-    GalleryComponent
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
