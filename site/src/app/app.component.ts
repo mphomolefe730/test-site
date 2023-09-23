@@ -7,7 +7,7 @@ import { AfterViewInit, Component } from '@angular/core';
 })
 export class AppComponent implements AfterViewInit{
   loader=true;
-  logo='../favicon.ico';
+  logo='../assets/icons/logo.svg';
 
   ngAfterViewInit() {
     // this.loader = false;
@@ -15,7 +15,6 @@ export class AppComponent implements AfterViewInit{
   ngOnInit():void{
     setTimeout(() => {
       this.loader = false
-    }, 7000);
-
+    }, 5000);
   }
 }

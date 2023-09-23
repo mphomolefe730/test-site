@@ -1,6 +1,9 @@
+hr,h1{
+    margin: 10px 0;
+}
 #cardContainer{
     display: flex;
-    max-height: 230px;
+    max-height: 270px;
     overflow-x: scroll;
     flex-flow: row;
 }

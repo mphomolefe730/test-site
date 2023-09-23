@@ -1,3 +1,4 @@
+/* ----------------container for everything------------------------------------ */
 .container{
     background-color: white;
     height: 100%;
@@ -6,10 +7,9 @@
     max-height: 80%;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    /* scrollbar-color: white; */
     scrollbar-width: 0;
 }
-
+/* ----------------container image------------------------------------ */
 .container .travel-img{
     background-image: url("/assets/images/thumbnails/Rectangle\ 19290\(1\).png");
     background-repeat: no-repeat;
@@ -18,7 +18,7 @@
     text-align: center;
     padding: 75px 0;
 }
-
+/* ----------------container inner text------------------------------------ */
 .container .travel-img .above-header, .container .travel-img .header {
     margin: 0;
 }
@@ -27,7 +27,7 @@
     font-family: Yesteryear;
     font-size: 72px;
 }
-
+/* ----------------container for filter section------------------------------------ */
 .container .filter-container {
     display: flex;
     /* justify-content: center; */
@@ -55,29 +55,35 @@
 .container .filter p span{
     scale: 1;
 }
-/*-------------items-------------*/
+/* ----------------container for items/packages------------------------------------ */
 
 .contents-container {
     display: grid;
     /*min width is 250px if theres space, add more items next to it*/
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
     gap:10px;
-    padding: 0 10px;
-    /* background-color: blue; */
     margin-bottom: 50px;
-
-    /* max-width: 60%; */
 }
 .contents-container .grid-item{
+    height: fit-content;
+    padding-bottom: 10px;
+    max-height: 500px;
+    border-radius: 20px;
+    border: 2px solid var(--transparentColor);
+    width: 100%;
     margin: 5px 0;
-    /* border: 2px solid var(--transparentColor);
-    background-color: aqua; */
 }
 
-.contents-container .grid-item img,
+.contents-container .grid-item img{
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
 .contents-container .grid-item p{
     width: 100%;
+    margin: 0;
 }
+
 .contents-container .grid-item .under-content{
     display: flex;
     justify-content: space-around;
@@ -86,18 +92,6 @@
     background-color: var(--primaryColor);
 }
 
-.contents-container .grid-item  h1{
-    font-weight: 800;
-    font-family: 'Poppins';
-    font-size: larger;
-}
-
-/* #priceSection{
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-} */
 .button-container {
     display: flex;
     justify-content: center;

@@ -16,8 +16,8 @@
             <li><a href="">Safety</a></li>
         </ul>
         <div class="buttons w-10/12 grid grid-cols-2 gap-4 absolute bottom-3">
-            <button class="btn2">Sign Up</button>
-            <button class="btn1-2">Log In</button>
+            <button routerLink="./account/sign-up"class="btn2">Sign Up</button>
+            <button routerLink="./account/sign-in" class="btn1-2">Log In</button>
         </div>
     </div>
     <nav [ngClass]="{'bg-transparent': !navbarSolid, 'bg-gray-700': navbarSolid}" >
@@ -68,7 +68,7 @@
                 </ul>
                 
             </div>
-            <button class="get_in_touch btn1 justify-self-center hidden lg:block">
+            <button routerLink="./account/sign-in" class="get_in_touch btn1 justify-self-center hidden lg:block">
                 Sign Up / Log In
             </button>
             <span (click)="toggleMenu()" class="menu material-symbols-outlined text-4xl text-white" style="font-size: 36px;">menu</span>

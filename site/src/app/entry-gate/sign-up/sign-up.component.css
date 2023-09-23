@@ -1,0 +1,19 @@
+form div label{
+    font-family: 'poppins';
+    font-weight: 800;
+}
+form div input{
+    padding: 5px;
+    background-color: var(--transparent);
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+}
+form button{
+    padding:10px 5px;
+    /* background-color: green; */
+    text-transform: uppercase;
+    /* color: white;
+    border-radius: 10px;
+    width: 100%; */
+}

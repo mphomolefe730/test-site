@@ -8,6 +8,7 @@ const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
   {path:'home', component: HomeComponent},
   {path:'about', component: AboutComponent},
+  {path:'account',loadChildren:()=>import('./entry-gate/entry-gate.module').then((m)=>m.EntryGateModule)},
   {path:'explore', loadChildren: ()=> import('./explore/explore.module').then((m)=>m.ExploreModule)},
   {path:'user', loadChildren: ()=> import('./user/user.module').then((m)=>m.UserModule)},
 ];

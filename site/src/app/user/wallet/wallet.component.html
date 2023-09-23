@@ -1,7 +1,6 @@
 <h1>CARDS</h1>
-<hr style="margin: 10px 0;">
+<hr/>
 <div id="cardContainer">
-    <hr>
     <div id="card" *ngFor="let card of cardInformation">
         <div class="heading">
             <h1>Master Card</h1>
@@ -24,7 +23,7 @@
     </div>
 </div>
 <h1>TRANSACTIONS</h1>
-<hr style="margin: 10px 0;"/>
+<hr/>
 <ul>
-    <li *ngFor="let info of activities"></li>
+    <li *ngFor="let info of activities;let j = index"></li>
 </ul>

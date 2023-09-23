@@ -5,7 +5,7 @@
     display: grid;
     grid-template-columns: 3fr 6fr 1fr;
     gap: 10px;
-    background-color: purple;
+    background-color: indigo;
     /* border: 2px solid var(--transparentColor); */
     min-height: 120px;
     margin: 10px 0;
@@ -16,6 +16,7 @@
     display: inline-flex;
     justify-content: center;
     flex-direction: column;
+    color: white;
 }
 
 #top img{
@@ -38,6 +39,7 @@
     margin: 0 5px;
     border: 2px solid var(--transparentColor);
     min-width: 150px;
+    min-height: 50px;
     border-radius: 10px;
 }
 #middle>p>span:hover{
@@ -56,13 +58,7 @@
     }
     #top{
         margin: 0;
-        min-width: 300px;
-        min-height: 300px;
-        display: block;
-        /* flex-direction: column; */
-    }
-    #top span{
-        display: none;
+        grid-template-columns: 2fr 3fr 1fr;
     }
     #top div{
         margin-top: 10px;
@@ -71,9 +67,7 @@
         min-height: 175px;
     }
     #middle{
-        /* display: block; */
-        /* max-width: 300px; */
-        min-height: 300px;
+        min-height: 100px;
         flex-direction: row;
     }
 }
