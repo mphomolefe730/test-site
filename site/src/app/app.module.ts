@@ -12,6 +12,7 @@ import { PackageModalComponent } from './components/package-modal/package-modal.
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { TourPackageCardComponent } from './components/tour-package-card/tour-package-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
    
     AboutComponent,
     GalleryComponent,
+    TourPackageCardComponent,
   ],
   imports: [
     BrowserModule,
