@@ -1,0 +1,46 @@
+.form-containers {
+    width: 80%;
+    max-width: 260px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 0px solid #cfc1c1;
+    background-color: #e4e6e9;
+    border-radius: 0px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:absolute ;
+    top: 360px; /* Adjust the top position as needed */
+    right: 245px; /* Adjust the right position as needed */
+  }
+
+  button {
+    background-color: #e04f4f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input {
+    background-color: #ffffff;
+    color: #493333;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 0.5px;
+    cursor: pointer;
+  }
+
+  .img-siter{
+    right: 100px; /* Adjust the right position as needed */
+    width: 15px;
+    height: 90px;
+    margin-top: 18%;
+    margin-left: 5%;
+    padding: -10px;
+    border: 0.2px solid;
+    color: rgb(102, 121, 121);
+  top: 80px;
+}
+
