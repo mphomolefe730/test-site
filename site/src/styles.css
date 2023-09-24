@@ -32,3 +32,42 @@ body { margin: 0;
     color: #DF6951;
     @apply font-semibold mb-2 ;
 }
+
+.btn1 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded-xl
+}
+
+.btn1-2 {
+    background-color: #DF6951;
+    color: white;
+    @apply p-3 rounded
+}
+
+.btn2 {
+    @apply p-3 rounded bg-transparent;
+    color: #DF6951; 
+    border: 1px solid #DF6951;
+    transition: .3s;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: #DF6951;
+}
+
+
+.outline-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    @apply p-3 rounded-xl;
+    transition: all .2s;
+    
+}
+
+.outline-btn:hover {
+    background-color: #DF6951;
+    border-color: #DF6951;
+}
