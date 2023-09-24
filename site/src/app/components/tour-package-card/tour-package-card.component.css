@@ -5,3 +5,11 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
+@media(prefers-color-scheme:dark){
+    div{
+        color: white;
+    }
+    .package{
+        border: 2px solid var(--transparentColor);
+    }
+}

@@ -5,8 +5,10 @@ import { PackagesComponent } from './packages/packages.component';
 
 const routes: Routes = [
   {path:'', component:PackagesViewComponent, children:[
-    // {path:'page', component:PackagesComponent},
-    
+    // {path:'',redirectTo:'explore',pathMatch:"full"},
+    // {path:'explore',component:PackagesComponent},
+    {path:'',component:PackagesComponent},
+    {path: 'page',loadChildren:()=>import('./product-view/product-view.module').then((m)=>m.ProductViewModule)}    
   ]},
 ];
 

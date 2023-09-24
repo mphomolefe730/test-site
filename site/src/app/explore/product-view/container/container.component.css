@@ -1,0 +1,48 @@
+/* ----------------container for everything------------------------------------ */
+.container{
+    /* background-color: white; */
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    max-height: 88%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+/* ----------------container image------------------------------------ */
+.container .travel-img{
+    background-image: url("/assets/images/explore-page-images/Rectangle\ 19291.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color: white;
+    text-align: center;
+    padding: 75px 0;
+}
+
+.container .travel-img .header {
+    font-family: Yesteryear;
+    font-size: 72px;
+}
+/* ----------------container for tab------------------------------------ */
+#middle {
+    display: flex;
+    background-color: lightgrey;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    width: 100%;
+    height: 10%;
+}
+#middle p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    min-width: 75px;
+}
+
+/* ----------------container active------------------------------------ */
+.active{
+    background-color: white;
+}
