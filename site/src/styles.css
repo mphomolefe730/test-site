@@ -1,10 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap);
-@import url('https://fonts.googleapis.com/css2?family=Asap&family=Dancing+Script:wght@500&family=Inconsolata&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Asap&family=Dancing&family=Inconsolata&family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Asap&family=Dancing+Script:wght@500&family=Inconsolata&family=Inter&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@media(prefers-color-scheme:dark){
+    body{
+        background-color: black;
+        color:color;
+    }
+}
 :root{
     --primaryColor: #DF6951;
     --transparentColor: rgba(217,217,217,0.2);

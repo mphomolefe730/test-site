@@ -2,6 +2,14 @@
     box-sizing: border-box;
 }
 
+@media(prefers-color-scheme:dark){
+    h1,p,div{
+        color: white;
+    }
+    .package{
+        border: 2px solid var(--transparentColor);
+    }
+}
 
 
 .material-symbols-outlined {

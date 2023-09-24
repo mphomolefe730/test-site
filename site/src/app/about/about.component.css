@@ -103,3 +103,8 @@
         width: 150px;
     }
 }
+@media(prefers-color-scheme:dark){
+    div,h1,p{
+        color: white;
+    }
+}

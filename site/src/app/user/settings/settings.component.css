@@ -71,3 +71,9 @@
         flex-direction: row;
     }
 }
+
+@media(prefers-color-scheme:dark){
+    p{
+        color: white;
+    }
+}

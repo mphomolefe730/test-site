@@ -1,4 +1,19 @@
-
+@media(prefers-color-scheme:dark){
+    #container{
+        background-color: rgba(0, 0, 0, 0.75);
+        border: 2px solid var(--transparentColor);
+        color: white;
+    }
+    span,h1{
+        color: white;
+    }
+    #Heading{
+        color: white;
+    }
+}
+#Heading{
+    color: rgba(24, 30, 75, 1);
+}
 .modal-holder {
     background-color: rgba(0, 0, 0, 0.4);
 }

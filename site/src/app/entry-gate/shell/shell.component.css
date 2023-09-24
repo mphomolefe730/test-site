@@ -1,20 +1,23 @@
 #formContainer{
     display: flex;
-    justify-content: center;
+    margin: auto;
+    /* justify-content: center; */
     align-items: center;
-    height: 100%;
+    height: 95%;
     width: 100%;
     flex-direction: column;
 }
 #formBorder{
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
     margin: auto;
     width: 80%;
     padding: 20px;
     border: 1px solid black;
     border-radius: 20px;
 }
-#formContainer img{
+#formContainer div img{
     margin: auto;
     max-width: 100px;
 }
@@ -29,4 +32,19 @@
 }
 .active{
     background-color: rgba(128, 128, 128, 0.1);
+}
+
+@media screen and (min-width: 500px){
+    #formBorder{
+        flex-flow: row;
+        width: 100%;
+        max-width: 700px;
+        align-items: center;
+        /* padding: 20px 5px; */
+    }
+
+    #formContainer div img{
+        width: 100%;
+        max-width: 350px;
+    }
 }

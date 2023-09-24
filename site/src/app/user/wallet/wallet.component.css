@@ -35,3 +35,13 @@ hr,h1{
 .helpText{
     color: rgba(255, 255, 255, 0.5);
 }
+
+@media(prefers-color-scheme:dark){
+    #card, #card div input{
+        background-color: var(--transparentColor);
+        border:2px solid var(--transparentColor)
+    }
+    h1{
+        color: white;
+    }
+}
