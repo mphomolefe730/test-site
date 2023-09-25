@@ -14,7 +14,7 @@
     </div>
 
     <div class="contents-container">
-        <div class="grid-item" *ngFor="let item of location">
+        <div (click)='navigateToProduct()' class="grid-item" *ngFor="let item of location">
             <img src='{{ item.img }}' alt="image" id="content">
             <p class="under-content mt-4 md:mt-0">
                 <span class="material-symbols-outlined">event</span>12, September 2022 

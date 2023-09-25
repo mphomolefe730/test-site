@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-packages',
@@ -6,6 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./packages.component.css']
 })
 export class PackagesComponent {
+  constructor(private route:Router){
+  }
+  
+  navigateToProduct(){
+    console.log('clicked');
+    this.route.navigate(['./explore/page/information']);
+  }
+
   location=[
     {name: 'Switzerland', description:'Qui Tempare Voluptate Qui QuiaCommodi Rem Praesentium Alias Et.',
     price:1100,rating:5,img:'/assets/images/thumbnails(1)/Rectangle 19377.png'},
