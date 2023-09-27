@@ -12,7 +12,7 @@
     }
 }
 #Heading{
-    color: rgba(24, 30, 75, 1);
+    color: var(--complimentaryColor);
 }
 .modal-holder {
     background-color: rgba(0, 0, 0, 0.4);

@@ -6,15 +6,15 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
-  loader=true;
+  loader=false;
   logo='../assets/icons/logo.svg';
 
   ngAfterViewInit() {
     // this.loader = false;
   }
-  ngOnInit():void{
-    setTimeout(() => {
-      this.loader = false
-    }, 5000);
-  }
+  // ngOnInit():void{
+  //   setTimeout(() => {
+  //     this.loader = false
+  //   }, 5000);
+  // }
 }

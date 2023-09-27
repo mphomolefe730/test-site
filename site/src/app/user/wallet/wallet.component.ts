@@ -7,9 +7,13 @@ import { Component } from '@angular/core';
 })
 export class WalletComponent {
   cardInformation=[
-    {number:1234123478659, date:'25/30', cvv:234},
-    {number:1238659412347, date:'02/22', cvv:904},
+    {number:'1234123478659', date:'25/30', cvv:'234'},
   ]
+  addCard(number:string,date:string,cvv:string){
+    this.cardInformation.push({number,date,cvv});
+    alert('Card Added')
+  }
+
   activities=[]
 
 }

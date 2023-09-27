@@ -8,12 +8,6 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   showModal = false;
 
-  // scrollToTop() {
-  //   const doc = document.querySelectorAll("body");
-  //   doc[doc.length - 1].scrollTo({top: 0, behavior: "smooth"});
-  // }
-  
-
   openModal = (): void => {
     this.showModal = true;
   }

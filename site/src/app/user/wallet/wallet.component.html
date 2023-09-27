@@ -1,24 +1,40 @@
 <h1>CARDS</h1>
 <hr/>
 <div id="cardContainer">
+    <div id="cardTemp">
+        <div class="heading">
+            <h1>Master Card</h1>
+            <i style="scale: 2" class="fa-brands fa-cc-mastercard"></i>
+        </div>
+        <div>
+            <input #Number matInput  id="cardNumberTemp"/>
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Number</span>
+        </div>
+        <div>
+            <input #Date matInput type="text"/>
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Date</span>
+            <input #Cvv matInput  type="number">
+            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card CVV</span>
+        </div>
+        <div class="heading">
+            <button style="background-color: red;">Delete</button>
+            <button mat-raised-button (click)="addCard(Number.value,Date.value,Cvv.value)" style="background-color: green;">Save</button>
+        </div>
+    </div>
     <div id="card" *ngFor="let card of cardInformation">
         <div class="heading">
             <h1>Master Card</h1>
             <i style="scale: 2" class="fa-brands fa-cc-mastercard"></i>
         </div>
         <div>
-            <input placeholder="{{card.number}}" type="password" id="cardNumber"/>
-            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Number</span>
+            <input placeholder="{{card.number}}" type="password" id="cardNumber"/><span class='helpText'>Card Number</span>
         </div>
         <div>
-            <input placeholder="{{ card.date }}" type="text"/>
-            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card Date</span>
-            <input placeholder="{{ card.cvv }}" type="number">
-            <span class="material-symbols-outlined">arrow_back</span><span class='helpText'>Card CVV</span>
+            <input placeholder="{{ card.date }}" type="text"/><span class='helpText'>Card Date</span>
+            <input placeholder="{{ card.cvv }}" type="number"><span class='helpText'>Card CVV</span>
         </div>
         <div class="heading">
             <button style="background-color: red;">Delete</button>
-            <button style="background-color: green;">Save</button>
         </div>
     </div>
 </div>

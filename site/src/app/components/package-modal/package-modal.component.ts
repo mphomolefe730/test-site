@@ -21,7 +21,5 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class PackageModalComponent {
   @Input() showModal: boolean = false;
   @Input() closeModal: Function = () => {};
-  @Input() openModal: Function = () => {};;
-
-
+  @Input() openModal: Function = () => {};
 }

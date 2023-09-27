@@ -6,29 +6,55 @@
 
     <div class="filter-container">
         <div class="filter">
-            <p><span class="material-symbols-outlined">event</span><b> Date</b></p>
-            <p><span class="material-symbols-outlined">arrow_upward</span><b> Price Low To High</b></p>
+            <p><span class="material-symbols-outlined">event</span><input type="date" value="{{checkIn}}"/></p>
+            <p><span class="material-symbols-outlined">event</span><input type="date" value="{{checkOut}}"/></p>
             <p><span class="material-symbols-outlined">arrow_downward</span><b> Price High To Low</b></p>
-            <p><span class="material-symbols-outlined">sort</span><b> Name (A-Z)</b></p>
+            <p><span class="material-symbols-outlined">arrow_upward</span><b> Price Low To High</b></p>
         </div>
     </div>
-
-    <div class="contents-container">
-        <div (click)='navigateToProduct()' class="grid-item" *ngFor="let item of location">
-            <img src='{{ item.img }}' alt="image" id="content">
-            <p class="under-content mt-4 md:mt-0">
-                <span class="material-symbols-outlined">event</span>12, September 2022 
-                <span class="material-symbols-outlined">person</span>120+
-            </p>
-            <h1 class="text-2xl mt-2 pl-1 pr-1 font-bold leading-tight text-gray-800 dark:text-gray-100">{{item.name}}</h1>
-            <p class='pl-1 pr-1 text-gray-600 dark:text-gray-400 text-sm'>{{item.description}}</p>
-            <p  class="pl-1 pr-1 text-xl font-black text-gray-800">
-                ${{item.price}}
-                <span class=" pl-1 pr-1 material-symbols-outlined font-normal text-gray-600 text-base">star</span><span class="font-normal text-gray-600 text-base">5.0</span>
-            </p>
+    <p (click)="showMenu()"><span class="material-symbols-outlined " style="margin-left: 7.5px;">settings</span></p>
+    <div *ngIf="menu" id="formEntryContainer">
+        <div id="formEntry" *ngFor="let items of catergories;let i = index">
+            <div>
+                <h1>{{ items.name }}</h1>
+                <p>{{ items.details }}</p>
+            </div>
+            <div id="quantityEntry">
+                <span *ngIf='items.status'(click)='minusFunction(i)' class="material-symbols-outlined">
+                    remove_circle
+                </span>
+                <span> {{ items.quantity }}</span>
+                <span (click)="addFunction(i)" class="material-symbols-outlined">
+                    add_circle
+                </span>
+            </div>
         </div>
+        <p style="background-color: var(--primaryColor);display: inline-flex;justify-content: center;align-items: center; width: 100%;
+        margin-bottom: 15px;border-radius: 10px; height: 30px;" (click)="applyFilter()">APPLY</p>
     </div>
 
+    <div id="filterCatergory">
+        <input *ngFor="let i of filterLocation;index as j" type="button" (click)="getHotel(j)" value="{{ filterLocation[j] }}"/>
+    </div>
+    
+    <div>
+        <div class="contents-container">
+            <div (click)='navigateToProduct()' class="grid-item" *ngFor="let item of location[0];let j = index">
+                <img [src]="item.cardPhotos[0].sizes.urlTemplate.replace('{width}', '1000').replace('{height}', '1000')" alt="image" id="content">
+                <p class="under-content mt-4 md:mt-0">
+                    <span class="material-symbols-outlined">event</span>{{checkIn}}
+                    <span class="material-symbols-outlined">person</span>{{adults}}+
+                </p>
+                <h1 class="text-2xl mt-2 pl-1 pr-1 font-bold leading-tight text-gray-800 dark:text-gray-100">{{ item.title }}</h1>
+                <p class='pl-1 pr-1 text-gray-600 dark:text-gray-400 text-sm'>{{ item.secondaryInfo }}</p>
+                <p class="pl-1 pr-1 text-xl font-black text-gray-800">
+                    {{ item.priceForDisplay }}
+                    <span class=" pl-1 pr-1 material-symbols-outlined font-normal text-gray-600 text-base">star</span><span class="font-normal text-gray-600 text-base">{{ item.bubbleRating.rating }}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <div class="button-container">
         <div class="btn">
             <button><i class="fa-solid fa-chevron-left"></i></button>

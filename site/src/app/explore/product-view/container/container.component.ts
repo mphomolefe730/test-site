@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-container',
@@ -6,4 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
+  constructor(private route:Router){
   }
+  
+  navigateToExplore(){
+    this.route.navigate(['./explore']);
+  }
+}

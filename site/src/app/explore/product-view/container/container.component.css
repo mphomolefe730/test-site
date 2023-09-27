@@ -17,8 +17,19 @@
     color: white;
     text-align: center;
     padding: 75px 0;
+    position: relative;
 }
 
+.container .travel-img span{
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    scale: 1.5;
+}
+
+.container .travel-img span:hover{
+    color: rgba(255, 255, 255, 0.2);
+}
 .container .travel-img .header {
     font-family: Yesteryear;
     font-size: 72px;
