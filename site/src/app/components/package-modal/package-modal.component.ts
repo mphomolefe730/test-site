@@ -23,9 +23,9 @@ export class PackageModalComponent {
   @Input() showModal: boolean = false;
   @Input() closeModal: Function = () => {};
   @Input() openModal: Function = () => {};;
-  geoid:any;
-  checkIn:any;
-  checkOut:any;
+  geoid:string = "";
+  checkIn:string = "";
+  checkOut:string = "";
 
   constructor(private router:Router) {}
 
@@ -45,13 +45,6 @@ export class PackageModalComponent {
   }
 
   buildPackage() {
-    this.router.navigate(["explore"],
-    {
-      state: {
-        geoid: this.geoid,
-        checkIn: this.checkIn,
-        checkOut: this.checkOut
-      }
-    })
+    this.router.navigate(['./explore'], { queryParams: { geoId: this.geoid, checkIn: this.checkIn, checkOut: this.checkOut } });
   }
 }
