@@ -24,6 +24,7 @@ module.exports = {
       },
       colors: {
         'main': '#DF6951',
+        "darkBlue": "rgba(24, 30, 75, 1)"
       }
     },
   },

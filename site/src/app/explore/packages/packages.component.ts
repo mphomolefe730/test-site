@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { GetHotelsFlightsService } from '../../services/get-hotels-flights.service'
+import { exploreToLandscapeService } from 'src/app/services/exploreToLandscapeService';
 
 @Component({
   selector: 'app-packages',
@@ -8,7 +9,7 @@ import { GetHotelsFlightsService } from '../../services/get-hotels-flights.servi
   styleUrls: ['./packages.component.css']
 })
 export class PackagesComponent {
-  constructor(private route:Router){
+  constructor(private route:Router, private exploreToLandscapeService: exploreToLandscapeService){
   }
   //---------------------array values--------------
   filterLocation=[
@@ -67,8 +68,9 @@ export class PackagesComponent {
   ngOnInit(){
     this.getHotel(1);
   }
-  navigateToProduct(){
-    this.route.navigate(['./explore/page/information'],{ queryParams:{geoId: this.geoId,checkIn :this.checkIn,checkOut: this.checkOut} });
+  navigateToProduct(index:any){
+    this.exploreToLandscapeService.updateData({hotelId: this.location[0][index].id, checkIn :this.checkIn,checkOut: this.checkOut, price:this.location[0][index].priceForDisplay})
+    this.route.navigate(['./explore/page/information']);
   }
 
   // changeCity(place:string){
