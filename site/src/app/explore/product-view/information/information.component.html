@@ -1,1 +1,163 @@
-<p>information works!</p>
+<div *ngIf="!data" class="p-5">
+    <div role="status" class="flex justify-center">
+        <svg aria-hidden="true" class="inline w-10 h-10 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+        </svg>
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+
+<div *ngIf="data" class="p-8">
+    <div class="flex items-center gap-3 flex-wrap sm:gap-9">
+        <h1 class="hotel-name">{{data.title}}</h1>
+        <button class="btn1">Book Now</button>
+    </div>
+    <p class="price">{{data.price.displayPrice || hotelBasicInfo.price}}</p>
+    <p class="blue">{{data.rankingDetails}}</p>
+    
+    <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+            <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+        </svg>
+        <div class="circle"></div>
+        <p class="blue">{{data.rating}}</p>
+        <div class="circle"></div>
+        <p class="blue">{{data.numberReviews >= 1000 ? (data.numberReviews / 1000).toFixed(2) + 'k' : data.numberReviews}} reviews</p>
+    </div>
+    <div class="about mt-8">
+        <p class="blue">
+           {{data.about.title}}
+        </p>
+    </div>
+    <div class="mt-16">
+        <h2 class="blue text-2xl">View Our Property</h2>
+        <div class="images mb-8">
+            <div *ngFor="let item of data.photos.slice(0, 3); let i = index">
+                <img *ngIf="i != 2" [src]="item.urlTemplate.replace('{width}', '200').replace('{height}', '200')" class="image" alt="" />
+                <div *ngIf="i === 2" class="relative" style="width: 200px; height: 200px;">
+                    <p (click)="takeToGallery()" class="absolute flex justify-center items-center text-white z-10 p-last">See More</p>
+                    <img class="w-full h-full object-cover" style="filter: brightness(0.5);" [src]="item.urlTemplate.replace('{width}', '200').replace('{height}', '200')" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="amenities mt-16">
+        <h2 class="blue text-2xl mb-2">Amenities</h2>
+        <div class="amenity-holder flex items-center gap-3 flex-wrap ">
+            <div *ngFor="let item of amenitiesContent; let i = index" class="amenity">
+                <div class="blue">{{item.title}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16">
+        <div class="flex items-center mb-2 gap-1">
+            <h2 class="text-2xl blue">Restaurants Nearby </h2>
+            <span class="material-symbols-outlined  text-dark dark:text-white text-dark dark:text-white">
+                storefront
+            </span>
+        </div>
+        <div class="restaurants flex gap-9 flex-wrap">
+            <ng-container *ngFor="let item of data.restaurantsNearby.content">
+                <div *ngIf="item.cardPhoto && (item.cardPhoto | keyvalue).length > 0"  class="restaurant" style="width: 250px;">
+                    <img [src]="item.cardPhoto.urlTemplate.replace('{width}', '200').replace('{height}', '200')" class="restaurant-image" alt="">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-5 mt-3 items-center justify-between">
+                            <h2 class="blue text-xl font-semibold">{{item.title}}</h2>
+                            <div class="flex items-center "  >
+                                <span class="material-symbols-outlined  text-dark dark:text-white">
+                                    distance
+                                </span>
+                                <p class="blue">{{item.distance}}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <div class="circle"></div>
+                            <p class="blue">{{item.bubbleRating.rating}}</p>
+                            <div class="circle"></div>
+                            <p class="blue">{{item.bubbleRating.numberReviews >= 1000 ? (item.bubbleRating.numberReviews / 1000).toFixed(2) + 'k' : item.bubbleRating.numberReviews}} reviews</p>
+                        </div>
+                        <p class="blue">{{item.primaryInfo}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="attractions mt-8">
+        <div class="flex items-center mb-2 gap-1">
+            <h2 class="blue text-2xl">Places to See</h2>
+            <span class="material-symbols-outlined  text-dark dark:text-white">
+                near_me
+            </span>
+        </div>
+        <!-- <div class="gallery" id="gallery">
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19356.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19357.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19361.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19362.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19363.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19360.png" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="content">
+                    <img src="../../../../assets/images/about-page images/carousel/Rectangle 19360.png" alt="">
+                </div>
+            </div>
+        </div> -->
+        <div class="restaurants flex gap-9 overflow-auto">
+            <ng-container *ngFor="let item of data.attractionsNearby.content">
+                <div *ngIf="item.cardPhoto && (item.cardPhoto | keyvalue).length > 0"  class="restaurant" style="width: 250px;">
+                    <img [src]="item.cardPhoto.urlTemplate.replace('{width}', '200').replace('{height}', '200')" class="restaurant-image" alt="">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-5 mt-3 items-center justify-between">
+                            <h2 class="blue text-xl font-semibold">{{item.title}}</h2>
+                            <div class="flex items-center "  >
+                                <span class="material-symbols-outlined  text-dark dark:text-white">
+                                    distance
+                                </span>
+                                <p class="blue">{{item.distance}}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
+                                <path d="M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z"/>
+                            </svg>
+                            <div class="circle"></div>
+                            <p class="blue">{{item.bubbleRating.rating}}</p>
+                            <div class="circle"></div>
+                            <p class="blue">{{item.bubbleRating.numberReviews >= 1000 ? (item.bubbleRating.numberReviews / 1000).toFixed(2) + 'k' : item.bubbleRating.numberReviews}} reviews</p>
+                        </div>
+                        <p class="blue">{{item.primaryInfo}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <div @fadeInOut *ngIf="showModal" class="modal-holder fixed top-0 left-0 bottom-0 right-0 w-full h-full z-50 md:p-16 p-8 flex items-center" style="z-index: 1000;">
-    <div id="container" class="modal w-full h-full bg-white p-6 pt-8 rounded-lg max-h-full md:grid md:grid-cols-auto-fit gap-4 grid-rows-1 relative">
+    <div id="container" class="modal w-full md:h-full bg-white p-6 pt-8 rounded-lg max-h-full md:grid md:grid-cols-auto-fit gap-4 grid-rows-1 relative">
         <span (click)="closeModal()" class="material-symbols-outlined mb-5 text-black absolute top-3 right-3" style="font-size: 36px;">
             close
         </span>
@@ -7,26 +7,62 @@
         <div class="flex flex-col h-full">
             <h1 id="Heading" class="text-2xl mb-4 font-bold text-center">Build Your Own Package</h1>
             <form class="modal-form flex flex-col gap-4 justify-between flex-grow max-h-full overflow-y-auto" action="">
-                <div class="flex flex-col gap-4">
-                    <div class="relative">
+                <div class="flex flex-col gap-2">
+                    <!-- <div class="relative">
                         <input type="text" id="floating_filled" class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 peer" placeholder=" " />
                         <label for="floating_filled" class="absolute text-sm  text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] left-2.5 peer-focus:text-main  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4">Destination</label>
-                    </div>
+                    </div> -->
                     <div>
-                        <label for="" class="text-gray-400">Date Range</label>
+                        <!-- <label for="default" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Default select</label> -->
+                        <select  (change)="onSelectChange($event)" id="cities" class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>-----Choose a City-----</option>
+                            <option value="293916">Bangkok, Thailand</option>
+                            <option value="187147">Paris, France</option>
+                            <option value="186338">London, United Kingdom</option>
+                            <!-- <option value="Dubai" value="187147">Dubai, United Arab Emirates</option> -->
+                            <option value="294265">Singapore, Southeast Asia</option>
+                            <!-- <option value="KualaLumpur" value="187147">Kuala Lumpur, Malaysia</option> -->
+                            <option value="60763">New York City, United States of America</option>
+                            <option value="293974">Istanbul, Turkey</option>
+                            <!-- <option value="Tokyo" value="187147">Tokyo, Japan</option> -->
+                            <!-- <option value="Antalya" value="187147">Antalya, Turkey</option> -->
+                            <option value="294197">Seoul, South Korea</option>
+                            <option value="1023540">Osaka, Japan</option>
+                            <!-- <option value="Makkah" data-geoid="187147">Makkah, Saudi Arabia</option> -->
+                            <!-- <option value="Phuket" data-geoid="187147">Phuket, Thailand</option> -->
+                            <!-- ---------------------------------------------- ------------------------------>
+                            <!-- <option value="Pattaya" data-geoid="187147">Pattaya, Thailand</option>
+                            <option value="Milan" data-geoid="187147">Milan, Italy</option>
+                            <option value="Barcelona" data-geoid="187147">Barcelona, Spain</option>
+                            <option value="PalmaDeMallorca" data-geoid="187147">Palma De Mallorca, Spain</option>
+                            <option value="Bali" data-geoid="187147">Bali, Indonesia</option>
+                            <option value="HongKongSAR" data-geoid="187147">Hong Kong SAR, China</option> -->
+                        </select>
+                    </div>
+                    <!-- <div>
+                        <select id="hotels" class="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>-----Choose a Hotel-----</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </div> -->
+                    <div>
+                        <label for="" class="text-gray-400">Date Range (How long do you want to stay there?)</label>
                         <div class="flex rounded-md gap-3 items-center xxs:flex-col xxs:gap-1 xxs:justify-center">
-                            <input type="date" name="" id="" class="border-2 rounded p-1 date-range xxs:w-full">
+                            <input (change)="checkInChange($event)" type="date" name="" id="" class="border-2 rounded p-1 date-range xxs:w-full dark:bg-gray-700 dark:border-gray-600 outline-0 dark:text-white">
                             <p class="text-gray-400">to</p>
-                            <input type="date" name="" id="" class="border-2 rounded p-1 date-range xxs:w-full">
+                            <input (change)="checkOutChange($event)" type="date" name="" id="" class="border-2 rounded p-1 date-range xxs:w-full dark:bg-gray-700 dark:border-gray-600 outline-0 dark:text-white">
                         </div>
                     </div>
-                    <div>
+                    <!-- <div>
                         <p style="color: #DF6951;" class="mb-3">Activities Preferences (optional)</p>
                         <app-activities></app-activities>
-                    </div>
+                    </div> -->
                 </div>
-                <button class="btn1 w-full">Build Package</button>
+                <button (click)="buildPackage()" class="btn1 w-full">Build Package</button>
             </form>
         </div>
     </div>
-</div>
+</div>s

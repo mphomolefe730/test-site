@@ -1,0 +1,16 @@
+.images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.images img {
+    border-radius: 8px;
+    transition: .3s;
+    object-fit: contain;
+    height: 100%;
+}
+
+.images img:hover {
+    transform: scale(1.05);
+}

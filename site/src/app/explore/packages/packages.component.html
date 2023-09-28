@@ -39,8 +39,8 @@
     
     <div>
         <div class="contents-container">
-            <div (click)='navigateToProduct()' class="grid-item" *ngFor="let item of location[0];let j = index">
-                <img [src]="item.cardPhotos[0].sizes.urlTemplate.replace('{width}', '1000').replace('{height}', '1000')" alt="image" id="content">
+            <div (click)='navigateToProduct(j)' class="grid-item" *ngFor="let item of location[0];let j = index">
+                <img style="object-fit: cover;" [src]="item.cardPhotos[0].sizes.urlTemplate.replace('{width}', '1000').replace('{height}', '1000')" alt="image" id="content">
                 <p class="under-content mt-4 md:mt-0">
                     <span class="material-symbols-outlined">event</span>{{checkIn}}
                     <span class="material-symbols-outlined">person</span>{{adults}}+
