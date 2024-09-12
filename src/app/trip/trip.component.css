@@ -1,0 +1,35 @@
+.form-containerss {
+    width: 80%;
+    max-width: 250px;
+    height: 410px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 100px;
+    border: 0px solid #cfc1c1;
+    background-color: #e4e6e9;
+    border-radius: px;
+    text-align: center;
+  }
+
+
+input {
+    background-color: #ffffff;
+    color: #ffa600ea;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0.5px;
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #0858ad96;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
